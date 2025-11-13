@@ -1,0 +1,26 @@
+Àrea,Competència,Checklist
+Fonaments,Entendre diferències entre plans (Free/Pro/Max),✓
+Fonaments,Configurar i usar Projects efectivament,✓
+Fonaments,Crear i publicar Artifacts interactius,✓
+Skills,Dissenyar Skills reutilitzables amb SKILL.md,✓
+Skills,Validar i provar Skills localment,✓
+Agents,Construir agent autònom amb Agent SDK,✓
+Agents,Configurar subagents i plan mode,✓
+Agents,Implementar agent loop complet,✓
+MCPs,Instal·lar i configurar MCP servers,✓
+MCPs,Crear MCP server personalitzat,✓
+MCPs,Integrar serveis externs (GitHub/Slack),✓
+Extended Thinking,Usar thinking budget apropiadamente,✓
+Extended Thinking,Aplicar a problemes complexos,✓
+Claude Code,Dominar comandos CLI essencials,✓
+Claude Code,Configurar CLAUDE.md i slash commands,✓
+Claude Code,Gestionar context en sessions llargues,✓
+API,Realitzar crides API bàsiques (Python/JS),✓
+API,Implementar converses multi-torn,✓
+API,Usar tool calling i streaming,✓
+Prompt Engineering,Aplicar Chain of Thought prompting,✓
+Prompt Engineering,Usar XML tags i prefilling,✓
+Prompt Engineering,Implementar prompt chaining,✓
+Context,Monitoritzar ús de tokens,✓
+Context,Aplicar estratègies de chunking,✓
+Context,Usar context editing i memory tool,✓
