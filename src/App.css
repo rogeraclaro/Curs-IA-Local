@@ -1,38 +1,99 @@
-.App {
+body {
+  background: #eef2f7;
+  color: #222;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
   text-align: center;
+  margin-top: 32px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  margin-top: 36px;
+  color: #3355a1;
+  font-size: 1.3em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  text-align: center;
+  margin-bottom: 32px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+nav a {
+  background: #fff;
+  border: 1px solid #c6d0e1;
+  padding: 8px 20px;
+  border-radius: 16px;
+  color: #3355a1;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background 0.22s, box-shadow 0.22s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav a:hover, nav a:focus {
+  background: #ddebfc;
+  box-shadow: 0 2px 10px 0 rgba(51, 85, 161, 0.07);
+}
+
+table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+  border-radius: 10px;
+  box-shadow: 0 3px 16px rgba(51, 85, 161, 0.06);
+  margin-bottom: 36px;
+  overflow: hidden;
+  font-size: 0.98em;
+}
+
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eceef3;
+}
+
+th {
+  background: #f6f8fb;
+  font-weight: 600;
+  color: #274085;
+  border-bottom: 2px solid #dae3f3;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 700px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  th, td {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px 6px;
+  }
+  table {
+    font-size: 0.97em;
+  }
+  h1 {
+    font-size: 1.3em;
+  }
+  h2 {
+    font-size: 1.08em;
   }
 }

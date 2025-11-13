@@ -1,0 +1,11 @@
+Nivel,ID,Descripción,Módulo aplicado
+Básico,Ejercicio 1,Crear un Project para análisis de documentos,Módulo 2
+Básico,Ejercicio 2,"Generar 5 Artifacts diferentes (código, SVG, React)",Módulo 2
+Intermedio,Ejercicio 3,Crear Skill para generar newsletters,Módulo 3
+Intermedio,Ejercicio 4,Desarrollar agente de investigación básico,Módulo 4
+Intermedio,Ejercicio 5,Configurar MCP para GitHub y analizar PRs,Módulo 5
+Avanzado,Ejercicio 6,Construir sistema multi-agente,Módulo 4
+Avanzado,Ejercicio 7,Crear MCP server personalizado,Módulo 5
+Avanzado,Ejercicio 8,Desarrollar aplicación fullstack con API,Módulo 8
+Avanzado,Ejercicio 9,Optimizar prompts con Chain of Thought,Módulo 9
+Avanzado,Ejercicio 10,Gestionar proyecto de 500K+ tokens,Módulo 10

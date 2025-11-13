@@ -1,0 +1,11 @@
+Módulo,Documentación oficial,Práctica recomendada,Tiempo estimado
+1. Fundamentos,docs.claude.com - Get Started,"Explorar interfaz web, crear cuenta Pro/Max",2-3 horas
+2. Projects/Artifacts,support.claude.com - Projects & Artifacts,Crear 3-5 Projects con diferentes casos de uso,3-4 horas
+3. Skills,anthropic.com - Skills Overview,Construir 5+ Skills personalizadas reutilizables,4-6 horas
+4. Agents,anthropic.com - Agent SDK,Desarrollar agente autónomo completo,6-8 horas
+5. MCPs,modelcontextprotocol.io - MCP Docs,"Configurar 3-5 MCP servers (GitHub, Slack, etc)",6-8 horas
+6. Extended Thinking,anthropic.com - Extended Thinking,Resolver problemas matemáticos/código complejo,3-4 horas
+7. Claude Code,docs.claude.com - Claude Code,Desarrollar proyecto fullstack con Claude Code,8-10 horas
+8. Claude API,docs.claude.com - API Reference,"Crear aplicación con API (chatbot, análisis)",6-8 horas
+9. Prompt Engineering,docs.claude.com - Prompt Engineering,Optimizar prompts de tus proyectos anteriores,4-6 horas
+10. Context Management,docs.claude.com - Context Windows,Gestionar proyecto grande (>100K tokens),4-5 horas

@@ -1,0 +1,26 @@
+Área,Competencia,Checklist
+Fundamentos,Entender diferencias entre planes (Free/Pro/Max),✓
+Fundamentos,Configurar y usar Projects efectivamente,✓
+Fundamentos,Crear y publicar Artifacts interactivos,✓
+Skills,Diseñar Skills reutilizables con SKILL.md,✓
+Skills,Validar y probar Skills localmente,✓
+Agents,Construir agente autónomo con Agent SDK,✓
+Agents,Configurar subagents y plan mode,✓
+Agents,Implementar agent loop completo,✓
+MCPs,Instalar y configurar MCP servers,✓
+MCPs,Crear MCP server personalizado,✓
+MCPs,Integrar servicios externos (GitHub/Slack),✓
+Extended Thinking,Usar thinking budget apropiadamente,✓
+Extended Thinking,Aplicar a problemas complejos,✓
+Claude Code,Dominar comandos CLI esenciales,✓
+Claude Code,Configurar CLAUDE.md y slash commands,✓
+Claude Code,Gestionar contexto en sesiones largas,✓
+API,Realizar llamadas API básicas (Python/JS),✓
+API,Implementar conversaciones multi-turno,✓
+API,Usar tool calling y streaming,✓
+Prompt Engineering,Aplicar Chain of Thought prompting,✓
+Prompt Engineering,Usar XML tags y prefilling,✓
+Prompt Engineering,Implementar prompt chaining,✓
+Context,Monitorear uso de tokens,✓
+Context,Aplicar estrategias de chunking,✓
+Context,Usar context editing y memory tool,✓
