@@ -264,6 +264,10 @@ function App() {
         if (event.state.page !== "home") {
           setModuleContent(event.state.content || "");
         }
+      } else {
+        // Si l'event.state és null, retorna a la pàgina principal
+        setCurrentPage("home");
+        setModuleContent("");
       }
     };
 
