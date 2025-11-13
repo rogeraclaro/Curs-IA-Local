@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import "./App.css";
 
 const moduleFiles = {
+  "Curs Estructurat": "curs-estructurat.md",
   "Módulo 1": "modul1-introduccio.md",
   "Módulo 2": "modul2-projects-artifacts.md",
   "Módulo 3": "modul3-skills.md",
@@ -76,6 +77,38 @@ function HomePage({ csvTables, onModuleClick }) {
   return (
     <div style={{ maxWidth: 1200, margin: "0 auto", padding: 28 }}>
       <h1 style={{ textAlign: "center", marginBottom: 30 }}>Curs Claude IA: Índex, Navegació i Recursos</h1>
+
+      <div style={{
+        background: "#e8f0fe",
+        border: "2px solid #3355a1",
+        borderRadius: "8px",
+        padding: "20px",
+        marginBottom: "30px",
+        textAlign: "center"
+      }}>
+        <h2 style={{ color: "#3355a1", marginTop: 0 }}>📚 Curs Complet Estructurat</h2>
+        <p style={{ marginBottom: "15px" }}>
+          Accedeix al curs estructurat complet de Claude IA: De Zero a Expert amb tots els mòduls i continguts organitzats progressivament.
+        </p>
+        <button
+          onClick={() => onModuleClick("Curs Estructurat")}
+          style={{
+            background: "#3355a1",
+            color: "white",
+            border: "none",
+            padding: "12px 24px",
+            borderRadius: "6px",
+            fontSize: "16px",
+            fontWeight: "bold",
+            cursor: "pointer",
+            transition: "background 0.3s"
+          }}
+          onMouseEnter={(e) => e.target.style.background = "#254080"}
+          onMouseLeave={(e) => e.target.style.background = "#3355a1"}
+        >
+          Veure el Curs Estructurat →
+        </button>
+      </div>
 
       <h2>Índex i estructura del curs</h2>
       <DataTable {...csvTables.estructura} onModuleClick={onModuleClick} />
