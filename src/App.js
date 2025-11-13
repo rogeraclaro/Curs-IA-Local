@@ -256,6 +256,21 @@ function App() {
     });
   }, []);
 
+  // Gestor per al botó "enrere" del navegador
+  useEffect(() => {
+    const handlePopState = (event) => {
+      if (event.state && event.state.page) {
+        setCurrentPage(event.state.page);
+        if (event.state.page !== "home") {
+          setModuleContent(event.state.content || "");
+        }
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
   // Carrega markdown d'un mòdul
   const openModule = async (modul) => {
     setLoading(true);
@@ -266,15 +281,31 @@ function App() {
         const txt = await resp.text();
         setModuleContent(txt);
         setCurrentPage(modul);
+        // Registra el canvi en el history del navegador
+        window.history.pushState(
+          { page: modul, content: txt },
+          modul,
+          `#${modul}`
+        );
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         setModuleContent("No s'ha trobat el fitxer markdown per a aquest mòdul.");
         setCurrentPage(modul);
+        window.history.pushState(
+          { page: modul, content: "" },
+          modul,
+          `#${modul}`
+        );
       }
     } catch (err) {
       console.error("Error carregant mòdul:", err);
       setModuleContent("Error al carregar el mòdul.");
       setCurrentPage(modul);
+      window.history.pushState(
+        { page: modul, content: "" },
+        modul,
+        `#${modul}`
+      );
     } finally {
       setLoading(false);
     }
@@ -302,7 +333,10 @@ function App() {
         <ModulePage
           moduleName={currentPage}
           moduleContent={moduleContent}
-          onGoHome={() => setCurrentPage("home")}
+          onGoHome={() => {
+            setCurrentPage("home");
+            window.history.pushState({ page: "home" }, "home", "#home");
+          }}
           onPrevious={goToPreviousModule}
           onNext={goToNextModule}
           onSelectModule={openModule}
