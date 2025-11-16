@@ -75,37 +75,18 @@ function DataTable({ data, headers, onModuleClick }) {
 // Pàgina d'inici
 function HomePage({ csvTables, onModuleClick }) {
   return (
-    <div style={{ maxWidth: 1200, margin: "0 auto", padding: 28 }}>
-      <h1 style={{ textAlign: "center", marginBottom: 30 }}>Curs Claude IA: Índex, Navegació i Recursos</h1>
+    <div className="content-container">
+      <div className="hero-section">
+        <h1>Curs Claude IA</h1>
+        <p style={{ fontSize: "1.2em", color: "#4b5563", maxWidth: "800px", margin: "0 auto" }}>Índex, Navegació i Recursos</p>
+      </div>
 
-      <div style={{
-        background: "#e8f0fe",
-        border: "2px solid #3355a1",
-        borderRadius: "8px",
-        padding: "20px",
-        marginBottom: "30px",
-        textAlign: "center"
-      }}>
-        <h2 style={{ color: "#3355a1", marginTop: 0 }}>📚 Curs Complet Estructurat</h2>
-        <p style={{ marginBottom: "15px" }}>
+      <div className="featured-course">
+        <h2>📚 Curs Complet Estructurat</h2>
+        <p>
           Accedeix al curs estructurat complet de Claude IA: De Zero a Expert amb tots els mòduls i continguts organitzats progressivament.
         </p>
-        <button
-          onClick={() => onModuleClick("Curs Estructurat")}
-          style={{
-            background: "#3355a1",
-            color: "white",
-            border: "none",
-            padding: "12px 24px",
-            borderRadius: "6px",
-            fontSize: "16px",
-            fontWeight: "bold",
-            cursor: "pointer",
-            transition: "background 0.3s"
-          }}
-          onMouseEnter={(e) => e.target.style.background = "#254080"}
-          onMouseLeave={(e) => e.target.style.background = "#3355a1"}
-        >
+        <button onClick={() => onModuleClick("Curs Estructurat")}>
           Veure el Curs Estructurat →
         </button>
       </div>
@@ -137,90 +118,34 @@ function ModulePage({ moduleName, moduleContent, onGoHome, onPrevious, onNext, o
   return (
     <div>
       {/* Menú superior */}
-      <nav style={{
-        background: "#3355a1",
-        color: "white",
-        padding: "12px 28px",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        flexWrap: "wrap",
-        gap: "12px"
-      }}>
+      <nav>
         <div>
-          <button
-            onClick={onGoHome}
-            style={{
-              background: "white",
-              color: "#3355a1",
-              border: "none",
-              padding: "8px 16px",
-              borderRadius: "6px",
-              cursor: "pointer",
-              fontWeight: "bold"
-            }}
-          >
+          <button onClick={onGoHome}>
             ← Tornar a l'inici
           </button>
         </div>
 
         <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
-          <button
-            onClick={onPrevious}
-            disabled={!hasPrevious}
-            style={{
-              background: hasPrevious ? "white" : "#ccc",
-              color: "#3355a1",
-              border: "none",
-              padding: "8px 12px",
-              borderRadius: "6px",
-              cursor: hasPrevious ? "pointer" : "not-allowed",
-              fontWeight: "bold"
-            }}
-          >
+          <button onClick={onPrevious} disabled={!hasPrevious}>
             ← Anterior
           </button>
 
-          <select
-            value={moduleName}
-            onChange={(e) => onSelectModule(e.target.value)}
-            style={{
-              padding: "8px 12px",
-              borderRadius: "6px",
-              border: "none",
-              cursor: "pointer",
-              fontWeight: "bold"
-            }}
-          >
+          <select value={moduleName} onChange={(e) => onSelectModule(e.target.value)}>
             {moduleList.map((mod) => (
               <option key={mod} value={mod}>{mod}</option>
             ))}
           </select>
 
-          <button
-            onClick={onNext}
-            disabled={!hasNext}
-            style={{
-              background: hasNext ? "white" : "#ccc",
-              color: "#3355a1",
-              border: "none",
-              padding: "8px 12px",
-              borderRadius: "6px",
-              cursor: hasNext ? "pointer" : "not-allowed",
-              fontWeight: "bold"
-            }}
-          >
+          <button onClick={onNext} disabled={!hasNext}>
             Següent →
           </button>
         </div>
       </nav>
 
       {/* Contingut del mòdul */}
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: 28 }}>
-        <h1 style={{ color: "#3355a1" }}>{moduleName}</h1>
-        <div style={{ lineHeight: "1.8" }}>
-          <ReactMarkdown>{moduleContent}</ReactMarkdown>
-        </div>
+      <div className="module-content">
+        <h1>{moduleName}</h1>
+        <ReactMarkdown>{moduleContent}</ReactMarkdown>
       </div>
     </div>
   );
